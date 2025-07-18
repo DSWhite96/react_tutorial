@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+/*
+  React uses hot realoading, so anytime a change is saved, the running application reflects that
+  JSX = Combination of JS and HTML
+*/
+import './App.css';
+import MovieCard from './components/MovieCard';
 
+//Component = Function in JavaScript that returns JSX code
+//Components should start with a capital letter
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
+    //There needs to be a parent element (e.g., a <div>)
+    //This is a fragment, which is great in situations where you don't want an actual parent element, but need to follow react structure
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <MovieCard movie={{title: "Tim's Film", release_date: "2024"}}/>
+      <MovieCard movie={{title: "Joe's Film", release_date: "2024"}}/>
     </>
   )
 }
+
+//To display a component in the application, you can include <COMPONENT_NAME /> in the App() function
+//You can pass a {prop} (prop stands for property) into a component like any other function
+/*function Text ({display}) {
+  return (
+    <div>
+      <p>{display}</p>
+    </div>
+  );
+}*/
 
 export default App
