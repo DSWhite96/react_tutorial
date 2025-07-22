@@ -1,4 +1,5 @@
 //Good practice to put components in separate folder from main app, keeps things less cluttered
+import "../css/MovieCard.css";
 
 function MovieCard({movie}) {
 

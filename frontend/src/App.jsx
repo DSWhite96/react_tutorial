@@ -2,7 +2,7 @@
   React uses hot realoading, so anytime a change is saved, the running application reflects that
   JSX = Combination of JS and HTML
 */
-import './App.css';
+import './css/App.css';
 import Home from './pages/home';
 import Favorites from './pages/favorites';
 import NavBar from './components/NavBar';
