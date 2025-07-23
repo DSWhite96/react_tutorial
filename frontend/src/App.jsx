@@ -7,6 +7,7 @@ import Home from './pages/home';
 import Favorites from './pages/favorites';
 import NavBar from './components/NavBar';
 import { Routes, Route } from 'react-router-dom';
+import { MovieProvider } from './contexts/MovieContext';
 
 //Component = Function in JavaScript that returns JSX code
 //Components should start with a capital letter
@@ -15,7 +16,7 @@ function App() {
   return (
     //There needs to be a parent element (e.g., a <div>)
     //<></> <---This is a fragment, which is great in situations where you don't want an actual parent element, but need to follow react structure
-    <div>
+    <MovieProvider>
       <NavBar />
       <main className='main-content'>
         <Routes>
@@ -23,7 +24,7 @@ function App() {
           <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </main>
-    </div>
+    </MovieProvider>
   );
 }
 
